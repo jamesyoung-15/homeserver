@@ -1,4 +1,5 @@
 #!/bin/bash
+# not used anymore use docker-compose one instead
 docker run -d \
  --name jellyfin \
  --user 1000:1000 \

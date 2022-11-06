@@ -1,17 +1,28 @@
 # Home Server
-Bare metal Ubuntu Server. Mainly to self-host services such as media players (eg. jellyfin) and so on. Just started and plan on adding many more services and add vlans to network.
+Bare metal Ubuntu Server. Mainly to self-host services such as media players (eg. jellyfin) and so on. Just started and plan on adding many more services and add vlans to network. Remote acccess via Wireguard.
 
 ### Services
 Currently running:
-- Jellyfin (streaming movies, music, etc)
-- Wireguard (VPN)
-- Portainer (GUI to manage and view containers)
-- Calibre (e-book service)
+- Main Server
+    - Docker Containers:
+        - Jellyfin (streaming movies, music, etc)
+        - Portainer (GUI to manage and view containers)
+        - Calibre (e-book service)
+        - NextCloud (file hosting)
+        - Homer (Service dashboard)
+        - NGINX Proxy Manager (Reverse proxy manager w/ SSL certs using cloudlfare api)
+    - Baremetal:
+        - Pihole
+- On other machines:
+    - Wireguard (VPN protocol for remote access)
+
+### So far:
+![](images/homer_dashboard-11072022.png)
 
 Plan to add:
-- NextCloud (file hosting)
+- Authelia (authentication)
 - GitLab (self-hosted github)
-- Traefik (reverse proxy)  
+- Also add vlans and add more security
 
 and many more
 
@@ -38,4 +49,4 @@ and many more
 
 ### Basic network diagram
 
-![](network_diagram/HomeNetwork.png)
+![](images/HomeNetwork.png)

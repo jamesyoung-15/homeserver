@@ -13,5 +13,5 @@ services:
       - /new-pool/jellyfin/cache:/cache
       - /new-pool/jellyfin/media:/media
     devices:
-      - /dev/dri:/dev/dri
+      - /dev/dri:/dev/dri # for hardware acceleration
     restart: 'unless-stopped'
